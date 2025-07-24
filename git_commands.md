@@ -1,52 +1,131 @@
-# Git Commands and Their Functions
+# Git Commands Cheat Sheet
 
-## Initialization
+A handy list of essential Git commands with their descriptions.
+
+---
+
+## Project Setup
+
 - `git init`  
-  Initializes a new Git repository in the current directory.
+  Initialize a new Git repository in the current folder.
+
+- `git clone <repo-url>`  
+  Clone a remote repository to your local system.
+
+---
 
 ## Configuration
+
 - `git config --global user.name "Your Name"`  
-  Sets the global username.
-- `git config --global user.email "your@example.com"`  
-  Sets the global email.
+  Set your Git username globally.
 
-## Staging and Committing
+- `git config --global user.email "you@example.com"`  
+  Set your Git email globally.
+
+- `git config --list`  
+  Show current Git configuration.
+
+---
+
+## Staging & Committing
+
+- `git status`  
+  Check the current status of files.
+
 - `git add <filename>`  
-  Adds a file to the staging area.
+  Stage a specific file for commit.
+
 - `git add .`  
-  Adds all modified and new files to the staging area.
+  Stage all changes (new, modified, deleted).
+
 - `git commit -m "Your message"`  
-  Commits the staged changes with a message.
+  Commit changes with a message.
 
-## Remote Repository
+---
+
+## Working with Remote Repositories
+
 - `git remote add origin <repo-url>`  
-  Adds a remote repository named `origin`.
-- `git push -u origin main`  
-  Pushes the committed code to the `main` branch and sets the upstream.
+  Add a remote repository named `origin`.
 
-## Pulling and Cloning
+- `git push -u origin main`  
+  Push changes to `main` branch and set upstream.
+
+- `git push`  
+  Push committed changes to the remote repository.
+
 - `git pull`  
-  Fetches and merges changes from the remote repository.
-- `git clone <repo-url>`  
-  Clones a repository into a new directory.
+  Pull updates from the remote repository and merge.
+
+---
 
 ## Branching
+
 - `git branch`  
-  Lists all local branches.
+  List all branches.
+
+- `git branch <branch-name>`  
+  Create a new branch.
+
+- `git checkout <branch-name>`  
+  Switch to an existing branch.
+
 - `git checkout -b <branch-name>`  
-  Creates and switches to a new branch.
+  Create and switch to a new branch.
+
 - `git merge <branch-name>`  
-  Merges the specified branch into the current one.
+  Merge a branch into the current one.
 
-## Status and Logs
-- `git status`  
-  Shows the status of changes (tracked/untracked/staged).
+---
+
+## Logs & Diffs
+
 - `git log`  
-  Displays the commit history.
+  View commit history.
 
-## Reset and Revert
-- `git reset --hard <commit>`  
-  Resets to a specific commit and discards all changes.
-- `git revert <commit>`  
-  Creates a new commit that undoes changes made in a specific commit.
+- `git log --oneline`  
+  View a compact log.
 
+- `git diff`  
+  Show unstaged differences.
+
+- `git diff --staged`  
+  Show staged differences.
+
+---
+
+## Undo / Reset / Revert
+
+- `git reset <file>`  
+  Unstage a file (keep changes).
+
+- `git checkout -- <file>`  
+  Revert file to last committed version.
+
+- `git reset --hard`  
+  Discard all uncommitted changes (irreversible).
+
+- `git revert <commit-hash>`  
+  Create a commit that reverses an earlier one.
+
+---
+
+## Cleanup
+
+- `git clean -f`  
+  Remove untracked files.
+
+- `git rm <filename>`  
+  Delete and stage file for removal.
+
+---
+
+## GitHub (via CLI)
+
+- `gh auth login`  
+  Authenticate GitHub CLI.
+
+- `gh repo create`  
+  Create a new GitHub repository from terminal.
+
+---
