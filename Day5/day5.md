@@ -1,4 +1,4 @@
-# Python Expressions – Conceptual Guide
+# Python Expressions
 
 ---
 
