@@ -55,6 +55,13 @@ a list, dictionary, or set.
 
 ---
 
+## 4. Generators
+
+### What Are They?
+
+Generators are a special type of iterable in Python that allow you to yield values one at a time using the `yield` keyword, instead of returning them all at once. They provide a memory-efficient way to iterate over large datasets or infinite sequences without storing the entire data in memory.
+---
+
 ## 4. Comprehensions
 
 ### What Are They?
